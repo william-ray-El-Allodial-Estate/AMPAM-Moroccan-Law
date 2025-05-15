@@ -1,14 +1,11 @@
-<!-- 🔰 AMPAM Crest Badge (Centered) -->
 <p align="center">
   <a href="https://william-ray-el-allodial-estate.github.io/AMPAM/">
-    <img src="https://william-ray-el-allodial-estate.github.io/AMPAM/AMPAM_Seal.png" alt="AMPAM Seal" width="200" />
+    <img src="https://william-ray-el-allodial-estate.github.io/AMPAM/AMPAM_Seal.png" alt="AMPAM Seal" width="180" />
   </a>
 </p>
 
 <h3 align="center">Allodium Moroccan Praedium Ante Michigan (AMPAM)</h3>
 <p align="center"><em>Moroccan Treaty Jurisdiction – Sovereign Trust Record</em></p>
-
----
 
 ## 📜 AMPAM – Moroccan Law Repository
 
@@ -57,7 +54,8 @@ A private jurisdiction operating under Moroccan Law of Nations and international
 - 📜 [Treaty of Fez – 1912](https://archive.org/details/jstor-2212598)
 - 🏛️ [U.S. v. Morocco – ICJ Case 1952](https://www.icj-cij.org/case/11)
 
----
+---[📜 View AMPAM Constitution (PDF)](AMPAM_Constitution.pdf)  
+[🌐 Visit AMPAM Site](https://william-ray-el-allodial-estate.github.io/AMPAM/)
 
 ### 🛡️ Sovereign Status Declaration
 
