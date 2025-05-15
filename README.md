@@ -1,12 +1,11 @@
 <p align="center">
   <a href="https://william-ray-el-allodial-estate.github.io/AMPAM/">
-    <img src="https://william-ray-el-allodial-estate.github.io/AMPAM/AMPAM_Seal.png" alt="AMPAM Seal" width="180" />
+    <img src="https://william-ray-el-allodial-estate.github.io/AMPAM/AMPAM_Seal.png" alt="AMPAM Seal" width="200" />
   </a>
 </p>
 
 <h3 align="center">Allodium Moroccan Praedium Ante Michigan (AMPAM)</h3>
 <p align="center"><em>Moroccan Treaty Jurisdiction – Sovereign Trust Record</em></p>
-
 ## 📜 AMPAM – Moroccan Law Repository
 
 This repository holds official public documents of the AMPAM jurisdiction, including:
