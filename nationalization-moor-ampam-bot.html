@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AMPAM Nationalization Bot</title>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.4.4/build/qrcode.min.js"></script>
+  <style>
+    body { font-family: Georgia, serif; background: #f4f4f4; padding: 2em; max-width: 900px; margin: auto; }
+    h1 { text-align: center; margin-bottom: 0.2em; }
+    .seal { display: block; margin: auto; max-width: 180px; }
+    .flag { display: block; margin: 2em auto 1em auto; max-width: 200px; }
+    input, button, textarea { width: 100%; padding: 10px; margin: 10px 0; }
+    #certificate { background: white; padding: 2em; margin-top: 2em; border-radius: 10px; box-shadow: 0 0 8px #aaa; white-space: pre-wrap; }
+    #qrcode { margin-top: 1em; }
+  </style>
+</head>
+<body>
+  <img src="AMPAM-SEAL.png" class="seal" alt="AMPAM Seal">
+  <h1>AMPAM Nationalization Certificate Generator</h1>
+
+  <label>Full Moorish Name:</label>
+  <input type="text" id="name" placeholder="e.g., william-ray: El">
+
+  <label>Place of Birth (U.S. jurisdiction):</label>
+  <input type="text" id="birthplace" placeholder="e.g., Detroit, Michigan">
+
+  <label>Lineage / Tribal House / Clan:</label>
+  <input type="text" id="lineage" placeholder="e.g., House of Watley">
+
+  <label>Date of Birth:</label>
+  <input type="text" id="dob" placeholder="e.g., August 9, 1976">
+
+  <label>Chosen Territory within AMPAM:</label>
+  <input type="text" id="territory" placeholder="e.g., East 7 Mile Domain">
+
+  <button onclick="generateCertificate()">Generate Nationalization Certificate</button>
+
+  <div id="certificate"></div>
+  <canvas id="qrcode"></canvas>
+  <img src="AMPAM-FLAG.png" class="flag" alt="AMPAM Flag">
+
+  <script>
+    function generateCertificate() {
+      const name = document.getElementById("name").value;
+      const birthplace = document.getElementById("birthplace").value;
+      const lineage = document.getElementById("lineage").value;
+      const dob = document.getElementById("dob").value;
+      const territory = document.getElementById("territory").value;
+      const timestamp = new Date().toLocaleString();
+
+      const declaration = `
+⚖️ AMPAM NATIONALIZATION DECLARATION
+Allodium Moroccan Praedium Ante Michigan
+Under the Treaty of Madrid (1880), Article 15, Paragraph 1
+
+Be it known and declared:
+
+I, ${name}, born in the foreign corporate jurisdiction of ${birthplace} on ${dob}, do hereby proclaim, affirm, and publish my nationalization into the territorial dominion of the Empire of Morocco, known lawfully as Allodium Moroccan Praedium Ante Michigan (AMPAM).
+
+Lineage / Tribal House: ${lineage}
+Declared Territory: ${territory}
+Date of Nationalization: ${timestamp}
+
+This act is done by right of inheritance, ancestry, and treaty.
+
+I renounce any artificial adhesion contracts, assumptions of corporate citizenship, or imposed foreign allegiances not of my free will.
+
+Notice to agent is notice to principal.
+
+Signed this day of ${timestamp}, under consular seal and divine inheritance.
+
+Signature: _________________________
+Witness / Embassy Clerk: _________________________
+      `.trim();
+
+      document.getElementById("certificate").textContent = declaration;
+
+      QRCode.toCanvas(document.getElementById('qrcode'), declaration, { width: 180 });
+    }
+  </script>
+</body>
+</html>
