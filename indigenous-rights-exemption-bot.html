@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Indigenous Rights Exemption Generator</title>
+  <style>
+    body { font-family: Georgia, serif; background: #f9f9f9; padding: 2em; }
+    h1 { text-align: center; font-size: 2.4em; }
+    label, textarea, input { display: block; width: 100%; margin-bottom: 1em; }
+    textarea { height: 200px; }
+    button { padding: 10px 15px; font-weight: bold; }
+    #output { white-space: pre-wrap; border: 1px solid #ccc; padding: 1em; background: #fff; }
+  </style>
+</head>
+<body>
+  <h1>Indigenous Rights Exemption Generator</h1>
+  <form id="exemptionForm">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="tribe">Nation or Indigenous Identity:</label>
+    <input type="text" id="tribe" required>
+
+    <label for="violation">Violation or Policy Objected To:</label>
+    <input type="text" id="violation" required>
+
+    <label for="basis">Religious or Indigenous Basis for Objection:</label>
+    <textarea id="basis" required></textarea>
+
+    <button type="button" onclick="generateLetter()">Generate Exemption Letter</button>
+  </form>
+
+  <h2>Generated Letter</h2>
+  <div id="output"></div>
+
+  <script>
+    function generateLetter() {
+      const name = document.getElementById('name').value;
+      const tribe = document.getElementById('tribe').value;
+      const violation = document.getElementById('violation').value;
+      const basis = document.getElementById('basis').value;
+
+      if (!name || !tribe || !violation || !basis) {
+        alert("Please complete all fields.");
+        return;
+      }
+
+      const letter = `
+To Whom It May Concern,
+
+I, ${name}, a member and recognized representative of the ${tribe}, formally object to the enforcement or requirement of the following policy: "${violation}".
+
+This objection is made in accordance with my constitutionally protected rights, natural liberties, and indigenous identity, which includes the right to freedom of religion, cultural expression, and bodily autonomy. This right is secured by national and international instruments including the U.S. Constitution, the United Nations Declaration on the Rights of Indigenous Peoples, and the Treaty of Peace and Friendship (1836) between the United States and Morocco.
+
+My objection is based on the following statement:
+"${basis}"
+
+No consent is given to any forced compliance, monitoring, or penalty related to my exercise of indigenous rights.
+
+Respectfully,
+
+${name}
+${tribe}
+Date: __________
+      `.trim();
+
+      document.getElementById('output').textContent = letter;
+    }
+  </script>
+</body>
+</html>
